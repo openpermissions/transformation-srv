@@ -10,7 +10,7 @@ futures==2.2.0
 html5lib==0.9999999
 isodate==0.5.4
 keepalive==0.5
-git+https://github.com/openpermissions/koi.git@1.0.6
+git+https://github.com/openpermissions/koi.git@ssl_options
 pyparsing==2.1.1
 rdflib==4.1.2
 requests==2.4.3
