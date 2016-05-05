@@ -65,11 +65,11 @@ def transform(input_data, data_format, r2rml_url, karma_timeout=120):
     """
     if not r2rml_url:
         if data_format == SCHEMA_TYPE_JSON:
-            r2rml_url = options.default_r2rml_mappings_json.format(
-                branch=options.karma_repo_branch)
+            r2rml_url = options.default_r2rml_mappings_json
         else:
-            r2rml_url = options.default_r2rml_mappings_csv.format(
-                branch=options.karma_repo_branch)
+            r2rml_url = options.default_r2rml_mappings_csv
+
+        r2rml_url = r2rml_url.format(version=options.r2ml_mappings_version)
 
     logging.info('transforming a %.2f kb %s file',
                  len(input_data) / 1024.0, data_format)
