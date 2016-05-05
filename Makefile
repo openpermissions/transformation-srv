@@ -1,4 +1,4 @@
-# (C) Copyright Digital Catapult Limited 2015-2016
+# Copyright 2016 Open Permissions Platform Coalition
 .PHONY: clean requirements test pylint html docs
 
 SHELL                 = /bin/bash
@@ -94,7 +94,7 @@ html:
 		-V $(SERVICE_VERSION) \
 		-R $(SERVICE_RELEASE) \
 		-H $(SOURCE_DIR) \
-		-A "Connected Digital Economy Catapult Limited" \
+		-A "Open Permissions Platform Coalition" \
 		-o $(BUILDDIR)/rst $(SOURCE_DIR)
 	cd $(BUILDDIR)/rst && PYTHONPATH=$(SERVICEDIR) make html BUILDDIR=$(BUILD_SOURCE_DOC_DIR)
 
