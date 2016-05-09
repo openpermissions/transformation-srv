@@ -1,4 +1,4 @@
-# (C) Copyright Digital Catapult Limited 2015-2016
+# Copyright 2016 Open Permissions Platform Coalition
 .PHONY: clean requirements test pylint html docs
 
 SHELL                 = /bin/bash
@@ -94,7 +94,7 @@ html:
 		-V $(SERVICE_VERSION) \
 		-R $(SERVICE_RELEASE) \
 		-H $(SOURCE_DIR) \
-		-A "Connected Digital Economy Catapult Limited" \
+		-A "Open Permissions Platform Coalition" \
 		-o $(BUILDDIR)/rst $(SOURCE_DIR)
 	cd $(BUILDDIR)/rst && PYTHONPATH=$(SERVICEDIR) make html BUILDDIR=$(BUILD_SOURCE_DOC_DIR)
 
@@ -159,10 +159,6 @@ egg_locks:
 			pip freeze >> $$req_file ; \
 			deactivate ; \
 			rm -rf $$venv_path ; \
-			sed -i '' -e 's|chub==\(.*\)|git+https://github.com/openpermissions/chub.git@\1|g' $$req_file ; \
-			sed -i '' -e 's|koi==\(.*\)|git+https://github.com/openpermissions/koi.git@\1|g' $$req_file ; \
-			sed -i '' -e 's|bass==\(.*\)|git+https://github.com/openpermissions/bass.git@\1|g' $$req_file ; \
-			sed -i '' -e 's|perch==\(.*\)|git+https://github.com/openpermissions/perch.git@\1|g' $$req_file ; \
 			sed -i '' -e 's|cloverpy==\(.*\)|git+https://github.com/catapultbamboo/cloverpy.git@\1|g' $$req_file ; \
 			sed -i '' -e 's|file-translate==|git+https://github.com/catapultbamboo/file_translate.git@|g' $$req_file ; \
 		fi; \
@@ -177,6 +173,6 @@ dev_register:
 dev_setup: dev_install dev_register
 
 test_register:
-	python transformation register_service copyright.hub@example.com password hogwarts
+	python transformation register_service opp@example.com password toppco
 
 test_setup: dev_install test_register
