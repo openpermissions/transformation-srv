@@ -1,8 +1,18 @@
 The Open Permissions Platform Transformation Service
 ====================================================
 
+Useful Links
+============
+* [Open Permissions Platform](http://openpermissions.org)
+* [Low level Design](https://github.com/openpermissions/transformation-srv/blob/master/documents/markdown/low-level-design.md)
+* [API Documentation](https://github.com/openpermissions/transformation-srv/blob/master/documents/apiary/api.md)
+
+Service Overview
+================
+The Transformation Service is a simple service used to transform rights data to a valid xml format.
+
 Running locally
-===============
+---------------
 To run the service locally:
 
 ```
@@ -24,7 +34,7 @@ python transformation/ -t [--test]
 ```
 
 Running tests and generating code coverage
-==========================================
+------------------------------------------
 To have a "clean" target from build artifacts:
 
 ```
